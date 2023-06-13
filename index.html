@@ -11,15 +11,16 @@
         <div class="documentContainer">
             <div id="headerContent"></div>
             <div id="bodyContent"></div>
-            <div id="footerContent"></div>
+            <div id="footerContent">
+            </div>
         </div>
     </body>
-    <script>
-        $(function(){
+    <script defer>        
+        $(document).ready(function () {            
             $("#headerContent").load("./html/header.html"); 
             $("#bodyContent").load("./html/main.html"); 
             $("#footerContent").load("./html/footer.html"); 
         });
     </script>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script.js" defer></script>
 </html>
