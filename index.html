@@ -9,18 +9,24 @@
     </head>
     <body>
         <div class="documentContainer">
-            <div id="headerContent"></div>
-            <div id="bodyContent"></div>
+            <div id="headerContent">
+                <header>
+                    <p>This will be the header</p>
+                </header>
+            </div>
+            <div id="bodyContent">
+                <main>
+                    <p>This will be the body content</p>
+                </main>
+            </div>
             <div id="footerContent">
+                <footer>
+                    <div class="copyrightContainer">
+                        <p>Logan Tyler, @<span id="currentYear"></span></p>
+                    </div>
+                </footer>
             </div>
         </div>
     </body>
-    <script defer>        
-        $(document).ready(function () {            
-            $("#headerContent").load("./html/header.html"); 
-            $("#bodyContent").load("./html/main.html"); 
-            $("#footerContent").load("./html/footer.html"); 
-        });
-    </script>
     <script src="./scripts/script.js" defer></script>
 </html>
