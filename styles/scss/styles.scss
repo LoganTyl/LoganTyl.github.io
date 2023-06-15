@@ -4,4 +4,19 @@ html {
 
 body {
     background-color: yellow;
+    margin: 0;
+
+    a {
+        color: blue;
+        &:visited {
+            color: blue;
+        }
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+    }
 }

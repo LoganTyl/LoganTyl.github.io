@@ -4,4 +4,17 @@ html {
 
 body {
   background-color: yellow;
+  margin: 0;
+}
+body a {
+  color: blue;
+}
+body a:visited {
+  color: blue;
+}
+body .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
 }/*# sourceMappingURL=styles.css.map */
