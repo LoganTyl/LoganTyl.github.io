@@ -1,24 +1,64 @@
 @import "colors.scss";
+@import "fonts.scss";
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: yellow;
-    margin: 0;
-
-    a {
-        color: blue;
-        &:visited {
-            color: blue;
-        }
+    h1 {
+        font-size: 2rem;
     }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: .75rem;
+    }
+
+    background-color: $color-theme-2-hex;
+    margin: 0;
 
     .navbar {
         position: fixed;
         top: 0;
         width: 100%;
-        background-color: white;
+        background-color: $color-theme-1-hex;
+        padding: 20px;
+        font-family: quicksand;
+
+        header {
+            margin-right: 50px;
+
+            nav {
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:visited {
+                color: white;
+            }
+        }
     }
 }
