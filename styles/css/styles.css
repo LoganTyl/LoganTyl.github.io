@@ -5,13 +5,29 @@
   font-family: quicksand;
   src: url(../../documents/fonts/quicksand.ttf);
 }
+@font-face {
+  font-family: oxygen;
+  src: url(../../documents/fonts/oxygen.ttf);
+}
+@font-face {
+  font-family: oxygenBold;
+  src: url(../../documents/fonts/oxygen-bold.ttf);
+}
+@font-face {
+  font-family: oxygenLight;
+  src: url(../../documents/fonts/oxygen-light.ttf);
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: "Helvetica";
   background-color: #E3F0FF;
   margin: 0;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: oxygen;
 }
 body h1 {
   font-size: 2rem;
@@ -35,12 +51,13 @@ body .navbar, body .footer {
   background-color: #7188A3;
   padding: 20px;
   font-family: quicksand;
-  color: white;
+  color: #F0DEBD;
 }
 body .navbar {
   position: fixed;
   top: 0;
   width: 100%;
+  margin-bottom: 1rem;
 }
 body .navbar header {
   margin-right: 50px;
@@ -51,12 +68,52 @@ body .navbar header nav {
   gap: 25px;
 }
 body .navbar a {
-  color: white;
+  color: #F0DEBD;
   text-decoration: none;
 }
 body .navbar a:visited {
-  color: white;
+  color: #F0DEBD;
 }
 body .footer {
   text-align: center;
+  margin-top: 1rem;
+}
+body .body main > div {
+  padding: 2rem 0;
+}
+body .body main > div:nth-of-type(odd) {
+  background-color: #E3F0FF;
+}
+body .body main > div:nth-of-type(even) {
+  background-color: #BED5EF;
+}
+body .body main > div#home {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+}
+body .body main > div#home .selfPortrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .body main > div#home .selfPortrait img {
+  width: 80%;
+  height: auto;
+  border: 5px solid #A38B60;
+  padding: 2px;
+  border-radius: 10px;
+}
+body .body main > div#home .homeText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+body .body main > div#home .homeText .openToWorkNotice {
+  font-size: 1.5rem;
+  font-family: oxygenLight;
+  font-style: italic;
 }/*# sourceMappingURL=styles.css.map */

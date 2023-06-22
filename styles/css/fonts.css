@@ -1,4 +1,16 @@
 @font-face {
   font-family: quicksand;
   src: url(../../documents/fonts/quicksand.ttf);
+}
+@font-face {
+  font-family: oxygen;
+  src: url(../../documents/fonts/oxygen.ttf);
+}
+@font-face {
+  font-family: oxygenBold;
+  src: url(../../documents/fonts/oxygen-bold.ttf);
+}
+@font-face {
+  font-family: oxygenLight;
+  src: url(../../documents/fonts/oxygen-light.ttf);
 }/*# sourceMappingURL=fonts.css.map */

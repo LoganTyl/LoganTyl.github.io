@@ -6,6 +6,12 @@ html {
 }
 
 body {
+    font-family: "Helvetica";
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: oxygen;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -37,13 +43,14 @@ body {
         background-color: $color-theme-1-hex;
         padding: 20px;
         font-family: quicksand;
-        color: white;
+        color: $color-theme-5-hex;
     }
 
     .navbar {
         position: fixed;
         top: 0;
         width: 100%;
+        margin-bottom: 1rem;
 
         header {
             margin-right: 50px;
@@ -56,16 +63,68 @@ body {
         }
 
         a {
-            color: white;
+            color: $color-theme-5-hex;
             text-decoration: none;
 
             &:visited {
-                color: white;
+                color: $color-theme-5-hex;
             }
         }
     }
 
     .footer {
         text-align: center;
+        margin-top: 1rem;
+    }
+
+    .body {
+        main {
+            > div {
+                padding: 2rem 0;
+                &:nth-of-type(odd) {
+                    background-color: $color-theme-2-hex;
+                }
+
+                &:nth-of-type(even) {
+                    background-color: $color-theme-3-hex;
+                }
+
+                &#home {
+                    margin-top: 3.5rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 5rem;
+
+                    .selfPortrait {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 80%;
+                            height: auto;
+                            border: 5px solid $color-theme-4-hex;
+                            padding: 2px;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .homeText {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 10px;
+
+                        .openToWorkNotice {
+                            font-size: 1.5rem;
+                            font-family: oxygenLight;
+                            font-style: italic;
+                        }
+                    }
+                }
+
+            }
+        }
     }
 }
