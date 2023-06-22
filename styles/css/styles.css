@@ -31,13 +31,16 @@ body h5 {
 body h6 {
   font-size: 0.75rem;
 }
+body .navbar, body .footer {
+  background-color: #7188A3;
+  padding: 20px;
+  font-family: quicksand;
+  color: white;
+}
 body .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #7188A3;
-  padding: 20px;
-  font-family: quicksand;
 }
 body .navbar header {
   margin-right: 50px;
@@ -45,13 +48,15 @@ body .navbar header {
 body .navbar header nav {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 25px;
 }
 body .navbar a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 body .navbar a:visited {
   color: white;
+}
+body .footer {
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */

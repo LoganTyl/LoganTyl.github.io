@@ -33,13 +33,17 @@ body {
     background-color: $color-theme-2-hex;
     margin: 0;
 
+    .navbar, .footer {
+        background-color: $color-theme-1-hex;
+        padding: 20px;
+        font-family: quicksand;
+        color: white;
+    }
+
     .navbar {
         position: fixed;
         top: 0;
         width: 100%;
-        background-color: $color-theme-1-hex;
-        padding: 20px;
-        font-family: quicksand;
 
         header {
             margin-right: 50px;
@@ -47,18 +51,21 @@ body {
             nav {
                 display: flex;
                 justify-content: flex-end;
-                gap: 10px;
+                gap: 25px;
             }
         }
 
         a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
 
             &:visited {
                 color: white;
             }
         }
+    }
+
+    .footer {
+        text-align: center;
     }
 }
