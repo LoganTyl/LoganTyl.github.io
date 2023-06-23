@@ -10,6 +10,7 @@ body {
 
     h1,h2,h3,h4,h5,h6 {
         font-family: oxygen;
+        padding-bottom: 10px;
     }
 
     h1 {
@@ -34,6 +35,18 @@ body {
 
     h6 {
         font-size: .75rem;
+    }
+
+    p {
+        padding: 10px 0;
+    }
+
+    ul {
+        margin-left: 20px;
+
+        li {
+            list-style: circle;
+        }
     }
 
     background-color: $color-theme-2-hex;
@@ -74,13 +87,13 @@ body {
 
     .footer {
         text-align: center;
-        margin-top: 1rem;
     }
 
     .body {
         main {
             > div {
-                padding: 2rem 0;
+                padding: 2rem 10rem;
+
                 &:nth-of-type(odd) {
                     background-color: $color-theme-2-hex;
                 }
@@ -100,12 +113,13 @@ body {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-
+                        
                         img {
+                            background-color: lighten($color: $color-theme-4-hex, $amount: 10%);
                             width: 80%;
                             height: auto;
                             border: 5px solid $color-theme-4-hex;
-                            padding: 2px;
+                            padding: 5px;
                             border-radius: 10px;
                         }
                     }
@@ -114,7 +128,6 @@ body {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-                        gap: 10px;
 
                         .openToWorkNotice {
                             font-size: 1.5rem;
@@ -124,7 +137,40 @@ body {
                     }
                 }
 
+                &#about {
+
+                }
+
+                &#skills {
+                    
+                }
+
+                &#projects {
+                    
+                }
+
+                &#resume {
+                    
+                }
+
+                &#contact {
+                    
+                }
             }
+        }
+
+        .spacer1 {
+            background: linear-gradient($color-theme-2-hex, $color-theme-3-hex);
+        }
+
+        .spacer2 {
+            background: linear-gradient($color-theme-3-hex, $color-theme-2-hex);
+        }
+
+        .spacer1, .spacer2 {
+            width: 100%;
+            height: 10px;
+            display: block;
         }
     }
 }

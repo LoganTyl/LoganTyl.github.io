@@ -28,6 +28,7 @@ body {
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: oxygen;
+  padding-bottom: 10px;
 }
 body h1 {
   font-size: 2rem;
@@ -46,6 +47,15 @@ body h5 {
 }
 body h6 {
   font-size: 0.75rem;
+}
+body p {
+  padding: 10px 0;
+}
+body ul {
+  margin-left: 20px;
+}
+body ul li {
+  list-style: circle;
 }
 body .navbar, body .footer {
   background-color: #7188A3;
@@ -76,10 +86,9 @@ body .navbar a:visited {
 }
 body .footer {
   text-align: center;
-  margin-top: 1rem;
 }
 body .body main > div {
-  padding: 2rem 0;
+  padding: 2rem 10rem;
 }
 body .body main > div:nth-of-type(odd) {
   background-color: #E3F0FF;
@@ -100,20 +109,31 @@ body .body main > div#home .selfPortrait {
   align-items: center;
 }
 body .body main > div#home .selfPortrait img {
+  background-color: #b6a380;
   width: 80%;
   height: auto;
   border: 5px solid #A38B60;
-  padding: 2px;
+  padding: 5px;
   border-radius: 10px;
 }
 body .body main > div#home .homeText {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
 }
 body .body main > div#home .homeText .openToWorkNotice {
   font-size: 1.5rem;
   font-family: oxygenLight;
   font-style: italic;
+}
+body .body .spacer1 {
+  background: linear-gradient(#E3F0FF, #BED5EF);
+}
+body .body .spacer2 {
+  background: linear-gradient(#BED5EF, #E3F0FF);
+}
+body .body .spacer1, body .body .spacer2 {
+  width: 100%;
+  height: 10px;
+  display: block;
 }/*# sourceMappingURL=styles.css.map */
