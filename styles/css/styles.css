@@ -19,6 +19,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 40px;
 }
 
 body {
@@ -31,10 +32,10 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   padding-bottom: 10px;
 }
 body h1 {
-  font-size: 2rem;
+  font-size: 2.125rem;
 }
 body h2 {
-  font-size: 1.75rem;
+  font-size: 1.875rem;
 }
 body h3 {
   font-size: 1.5rem;
@@ -50,24 +51,39 @@ body h6 {
 }
 body p {
   padding: 10px 0;
+  line-height: 20px;
 }
 body ul {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 body ul li {
-  list-style: circle;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
+}
+body ul li:before {
+  display: block;
+  content: "";
+  top: 50%;
+  border-radius: 50%;
+  right: 10px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid black;
+  position: relative;
 }
 body .navbar, body .footer {
   background-color: #7188A3;
   padding: 20px;
   font-family: quicksand;
   color: #F0DEBD;
+  z-index: 5;
 }
 body .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  margin-bottom: 1rem;
 }
 body .navbar header {
   margin-right: 50px;
@@ -125,6 +141,23 @@ body .body main > div#home .homeText .openToWorkNotice {
   font-size: 1.5rem;
   font-family: oxygenLight;
   font-style: italic;
+}
+body .body main > div#skills .skillList {
+  padding: 20px 0;
+}
+body .body main > div#skills .skillList ul {
+  -moz-columns: 3;
+       columns: 3;
+}
+body .body main > div#projects ul {
+  margin-left: 0;
+}
+body .body main > div#projects ul .companyListItem::before {
+  display: none;
+}
+body .body main > div#projects ul .companyListItem img {
+  width: 200px;
+  height: auto;
 }
 body .body .spacer1 {
   background: linear-gradient(#E3F0FF, #BED5EF);
