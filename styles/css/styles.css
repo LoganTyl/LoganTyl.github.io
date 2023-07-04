@@ -152,11 +152,27 @@ body .body main > div#skills .skillList ul {
 body .body main > div#projects ul {
   margin-left: 0;
 }
-body .body main > div#projects ul .companyListItem::before {
+body .body main > div#projects ul li {
+  padding: 10px 0;
+}
+body .body main > div#projects ul li.companyListItem::before {
   display: none;
 }
-body .body main > div#projects ul .companyListItem img {
+body .body main > div#projects ul li.companyListItem embed {
   width: 200px;
+  height: auto;
+}
+body .body main > div#contact ul {
+  margin-left: 0;
+}
+body .body main > div#contact ul li {
+  padding: 10px 0;
+}
+body .body main > div#contact ul li.contactListItem::before {
+  display: none;
+}
+body .body main > div#contact ul li.contactListItem embed {
+  width: 50px;
   height: auto;
 }
 body .body .spacer1 {

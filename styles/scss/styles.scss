@@ -172,16 +172,21 @@ body {
                     ul {
                         margin-left: 0;
 
-                        .companyListItem {
-                            &::before {
-                                display: none;
-                            }
-    
-                            img {
-                                width: 200px;
-                                height: auto;
+                        li {
+                            padding: 10px 0;
+
+                            &.companyListItem {
+                                &::before {
+                                    display: none;
+                                }
+        
+                                embed {
+                                    width: 200px;
+                                    height: auto;
+                                }
                             }
                         }
+
                     }
                 }
 
@@ -190,7 +195,25 @@ body {
                 }
 
                 &#contact {
-                    
+                    ul {
+                        margin-left: 0;
+
+                        li {
+                            padding: 10px 0;
+
+                            &.contactListItem {
+                                &::before {
+                                    display: none;
+                                }
+        
+                                embed {
+                                    width: 50px;
+                                    height: auto;
+                                }
+                            }
+                        }
+
+                    }
                 }
             }
         }
