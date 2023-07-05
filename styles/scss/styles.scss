@@ -171,9 +171,15 @@ body {
                 &#projects {
                     ul {
                         margin-left: 0;
+                        margin-top: 1rem;
+                        display: flex;
+                        justify-content: space-evenly;
 
                         li {
                             padding: 10px 0;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            gap: 2rem;
 
                             &.companyListItem {
                                 &::before {
@@ -183,6 +189,11 @@ body {
                                 embed {
                                     width: 200px;
                                     height: auto;
+
+                                    &#healthCatalystLogo, &#zapmotoLogo {
+                                        bottom: 2rem;
+                                        position: relative;
+                                    }
                                 }
                             }
                         }

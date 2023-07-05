@@ -151,9 +151,15 @@ body .body main > div#skills .skillList ul {
 }
 body .body main > div#projects ul {
   margin-left: 0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 body .body main > div#projects ul li {
   padding: 10px 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
 }
 body .body main > div#projects ul li.companyListItem::before {
   display: none;
@@ -161,6 +167,10 @@ body .body main > div#projects ul li.companyListItem::before {
 body .body main > div#projects ul li.companyListItem embed {
   width: 200px;
   height: auto;
+}
+body .body main > div#projects ul li.companyListItem embed#healthCatalystLogo, body .body main > div#projects ul li.companyListItem embed#zapmotoLogo {
+  bottom: 2rem;
+  position: relative;
 }
 body .body main > div#contact ul {
   margin-left: 0;
