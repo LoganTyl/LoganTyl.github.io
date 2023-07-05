@@ -95,6 +95,7 @@ body {
         a {
             color: $color-theme-5-hex;
             text-decoration: none;
+            font-size: 20px;
 
             &:visited {
                 color: $color-theme-5-hex;
@@ -181,6 +182,10 @@ body {
                             justify-content: flex-end;
                             gap: 2rem;
 
+                            a {
+                                color: darken($color-theme-4-hex, 20%);
+                            }
+
                             &.companyListItem {
                                 &::before {
                                     display: none;
@@ -202,7 +207,9 @@ body {
                 }
 
                 &#resume {
-                    
+                    a {
+                        color: darken($color-theme-4-hex, 20%);
+                    }
                 }
 
                 &#contact {
@@ -211,6 +218,11 @@ body {
 
                         li {
                             padding: 10px 0;
+                            gap: 1rem;
+
+                            a {
+                                color: darken($color-theme-4-hex, 20%);
+                            }
 
                             &.contactListItem {
                                 &::before {

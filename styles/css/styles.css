@@ -96,6 +96,7 @@ body .navbar header nav {
 body .navbar a {
   color: #F0DEBD;
   text-decoration: none;
+  font-size: 20px;
 }
 body .navbar a:visited {
   color: #F0DEBD;
@@ -161,6 +162,9 @@ body .body main > div#projects ul li {
   justify-content: flex-end;
   gap: 2rem;
 }
+body .body main > div#projects ul li a {
+  color: #63543a;
+}
 body .body main > div#projects ul li.companyListItem::before {
   display: none;
 }
@@ -172,11 +176,18 @@ body .body main > div#projects ul li.companyListItem embed#healthCatalystLogo, b
   bottom: 2rem;
   position: relative;
 }
+body .body main > div#resume a {
+  color: #63543a;
+}
 body .body main > div#contact ul {
   margin-left: 0;
 }
 body .body main > div#contact ul li {
   padding: 10px 0;
+  gap: 1rem;
+}
+body .body main > div#contact ul li a {
+  color: #63543a;
 }
 body .body main > div#contact ul li.contactListItem::before {
   display: none;
