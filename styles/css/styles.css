@@ -1,6 +1,5 @@
 /* Color Theme Swatches in Hex */
 /* Color Theme Swatches in RGBA */
-/* Color Theme Swatches in HSLA */
 @font-face {
   font-family: quicksand;
   src: url(../../documents/fonts/quicksand.ttf);
@@ -85,13 +84,31 @@ body .navbar {
   top: 0;
   width: 100%;
 }
-body .navbar header {
+body .navbar > header {
   margin-right: 50px;
 }
-body .navbar header nav {
+body .navbar > header > nav {
   display: flex;
   justify-content: flex-end;
   gap: 25px;
+}
+body .navbar > header > div.hamburgerMenu {
+  display: flex;
+  justify-content: flex-end;
+}
+body .navbar > header > div.hamburgerMenu > .hamburgerIcon {
+  display: none;
+  height: 23px;
+  width: 35px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .navbar > header > div.hamburgerMenu > .hamburgerIcon .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: black;
 }
 body .navbar a {
   color: #F0DEBD;
@@ -206,4 +223,34 @@ body .body .spacer1, body .body .spacer2 {
   width: 100%;
   height: 10px;
   display: block;
+}
+@media screen and (max-width: 1000px) {
+  body .body main > div {
+    padding: 2rem 7.5rem;
+  }
+  body .body main > div#projects ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  body .body main > div#projects ul li {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  body .body main > div#projects ul li.companyListItem embed#healthCatalystLogo, body .body main > div#projects ul li.companyListItem embed#zapmotoLogo {
+    bottom: 0px;
+  }
+}
+@media screen and (max-width: 750px) {
+  body .navbar > header > nav {
+    display: none;
+  }
+  body .navbar > header > div.hamburgerMenu > .hamburgerIcon {
+    display: flex;
+  }
+  body .body main > div {
+    padding: 2rem 5rem;
+  }
+  body .body main > div#home {
+    gap: 2rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
