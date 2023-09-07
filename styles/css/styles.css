@@ -95,15 +95,40 @@ body .navbar > header > nav {
 body .navbar > header > div.hamburgerMenu {
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
 }
-body .navbar > header > div.hamburgerMenu > .hamburgerIcon {
+body .navbar > header > div.hamburgerMenu .hamburgerIcon {
   display: none;
   height: 23px;
   width: 35px;
   flex-direction: column;
   justify-content: space-between;
 }
-body .navbar > header > div.hamburgerMenu > .hamburgerIcon .line {
+body .navbar > header > div.hamburgerMenu .hamburgerIcon.menuOpened .line {
+  transition: transform 0.5s ease-in-out;
+}
+body .navbar > header > div.hamburgerMenu .hamburgerIcon.menuOpened .line.line1 {
+  transform: rotate(45deg) translate(0, 13px);
+}
+body .navbar > header > div.hamburgerMenu .hamburgerIcon.menuOpened .line.line2 {
+  transform: scaleY(0);
+}
+body .navbar > header > div.hamburgerMenu .hamburgerIcon.menuOpened .line.line3 {
+  transform: rotate(-45deg) translate(0, -13px);
+}
+body .navbar > header > div.hamburgerMenu .hamburgerIcon.menuClosed .line {
+  transition: transform 0.5s ease-in-out;
+}
+body .navbar > header > div.hamburgerMenu .hamburgerIcon.menuClosed .line.line1 {
+  transform: unset;
+}
+body .navbar > header > div.hamburgerMenu .hamburgerIcon.menuClosed .line.line2 {
+  transform: unset;
+}
+body .navbar > header > div.hamburgerMenu .hamburgerIcon.menuClosed .line.line3 {
+  transform: unset;
+}
+body .navbar > header > div.hamburgerMenu .hamburgerIcon .line {
   display: block;
   height: 4px;
   width: 100%;

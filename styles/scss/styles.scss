@@ -94,13 +94,49 @@ body {
             > div.hamburgerMenu {
                 display: flex;
                 justify-content: flex-end;
+                cursor: pointer;
 
-                > .hamburgerIcon {
+                .hamburgerCheckbox {
+                    // position: absolute;
+                    // display: none;
+                }
+
+                .hamburgerIcon {
                     display: none;
                     height: 23px;
                     width: 35px;
                     flex-direction: column;
                     justify-content: space-between;
+
+                    &.menuOpened {
+                        .line {
+                            transition: transform 0.5s ease-in-out;
+                            &.line1 {
+                                transform: rotate(45deg) translate(0, 13px);
+                            }
+                            &.line2 {
+                                transform: scaleY(0);
+                            }
+                            &.line3 {
+                                transform: rotate(-45deg) translate(0, -13px);
+                            }
+                        }
+                    }
+
+                    &.menuClosed {
+                        .line {
+                            transition: transform 0.5s ease-in-out;
+                            &.line1 {
+                                transform: unset;
+                            }
+                            &.line2 {
+                                transform: unset;
+                            }
+                            &.line3 {
+                                transform: unset;
+                            }
+                        }
+                    }
                     
                     .line {
                         display: block;
