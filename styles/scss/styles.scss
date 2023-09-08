@@ -95,11 +95,8 @@ body {
                 display: flex;
                 justify-content: flex-end;
                 cursor: pointer;
-
-                .hamburgerCheckbox {
-                    // position: absolute;
-                    // display: none;
-                }
+                position: relative;
+                z-index: 2;
 
                 .hamburgerIcon {
                     display: none;
@@ -145,6 +142,22 @@ body {
                         border-radius: 10px;
                         background: black;
                     }
+                }
+            }
+
+            div.mobileSlideOutMenu {
+                position: absolute;
+                background: gray;
+                height: 100vh;
+                padding: 50px 10px 10px;
+                right: 40px;
+                width: 30%;
+                top: 0;
+
+                nav {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
                 }
             }
         }
