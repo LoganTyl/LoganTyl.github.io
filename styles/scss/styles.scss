@@ -43,7 +43,7 @@ body {
         line-height: 20px;
     }
 
-    ul {
+    ul:not(.mobileNav) {
         margin-left: 10px;
 
         li {
@@ -92,55 +92,93 @@ body {
             }
 
             > div.hamburgerMenu {
-                display: flex;
-                justify-content: flex-end;
-                cursor: pointer;
-                position: relative;
-                z-index: 2;
+                display: none;
+                > #mobileNavToggle {
+                    opacity: 0;
 
-                .hamburgerIcon {
-                    display: none;
-                    height: 23px;
-                    width: 35px;
-                    flex-direction: column;
-                    justify-content: space-between;
+                    &:checked {
+                        + .mobileNavToggleBtn {
+                            > span, > span::before, > span::after {
+                                background-color: black;
+                            }
 
-                    &.menuOpened {
-                        .line {
-                            transition: transform 0.5s ease-in-out;
-                            &.line1 {
-                                transform: rotate(45deg) translate(0, 13px);
+                            > span {
+                                transform: rotate(45deg);
                             }
-                            &.line2 {
-                                transform: scaleY(0);
+
+                            > span::before {
+                                top: 0;
+                                transform: rotate(0deg);
                             }
-                            &.line3 {
-                                transform: rotate(-45deg) translate(0, -13px);
+
+                            > span::after {
+                                top: 0;
+                                transform: rotate(90deg);
                             }
+                        }
+
+                        ~ .mobileNav {
+                            right: 0 !important;
                         }
                     }
+                }
 
-                    &.menuClosed {
-                        .line {
-                            transition: transform 0.5s ease-in-out;
-                            &.line1 {
-                                transform: unset;
-                            }
-                            &.line2 {
-                                transform: unset;
-                            }
-                            &.line3 {
-                                transform: unset;
-                            }
-                        }
+                .mobileNavToggleBtn {
+                    position: fixed;
+                    top: 27px;
+                    right: 20px;
+                    width: 26px;
+                    height: 26px;
+                    cursor: pointer;
+                    z-index: 1;
+
+                    > span, > span::before, > span::after {
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $color-theme-2-hex;
+                        transition-duration: .25s;
+                    }
+
+                    > span::before {
+                        content: '';
+                        top: -8px
                     }
                     
-                    .line {
+                    > span::after {
+                        content: '';
+                        top: 8px
+                    }
+                }
+
+                .mobileNav {
+                    display: block;
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    width: 300px;
+                    height: 100%;
+                    margin: 0;
+                    padding: 80px 0;
+                    list-style: none;
+                    background-color: #ECEFF1;
+                    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+                    transition-duration: .25s;
+
+                    .mobileNavLink {
                         display: block;
-                        height: 4px;
-                        width: 100%;
-                        border-radius: 10px;
-                        background: black;
+                        padding: 12px 24px;
+                        color: #333;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 20px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        transition-duration: .25s;
+
+                        &:hover {
+                            background-color: #CFD8DC;
+                        }
                     }
                 }
             }
@@ -225,9 +263,8 @@ body {
                     }
                 }
 
-                &#about {
-
-                }
+                // &#about {
+                // }
 
                 &#skills {
                     .skillList {
@@ -365,89 +402,8 @@ body {
                 }
 
                 > div.hamburgerMenu {
-                    > #menu__toggle {
-                        opacity: 0;
-
-                        &:checked {
-                            + .menu__btn {
-                                > span {
-                                    transform: rotate(45deg);
-    
-                                    &::before {
-                                        top: 0;
-                                        transform: rotate(0deg);
-                                    }
-    
-                                    &::after {
-                                        top: 0;
-                                        transform: rotate(90deg);
-                                    }
-                                }
-                            }
-
-                            ~ .menu__box {
-                                right: 0 !important;
-                            }
-                        }
-                    }
-
-                    .menu__btn {
-                        position: fixed;
-                        top: 20px;
-                        right: 20px;
-                        width: 26px;
-                        height: 26px;
-                        cursor: pointer;
-
-                        > span, > span::before, > span::after {
-                            display: block;
-                            position: absolute;
-                            width: 100%;
-                            height: 2px;
-                            background-color: #616161;
-                            transition-duration: .25s;
-
-                            > &::before {
-                                content: '';
-                                top: -8px
-                            }
-                            
-                            > &::after {
-                                content: '';
-                                top: 8px
-                            }
-                        }
-                    }
-
-                    .menu__box {
-                        display: block;
-                        position: fixed;
-                        top: 0;
-                        right: -100%;
-                        width: 300px;
-                        height: 100%;
-                        margin: 0;
-                        padding: 80px 0;
-                        list-style: none;
-                        background-color: #ECEFF1;
-                        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-                        transition-duration: .25s;
-
-                        .menu__item {
-                            display: block;
-                            padding: 12px 24px;
-                            color: #333;
-                            font-family: 'Roboto', sans-serif;
-                            font-size: 20px;
-                            font-weight: 600;
-                            text-decoration: none;
-                            transition-duration: .25s;
-
-                            &:hover {
-                                background-color: #CFD8DC;
-                            }
-                        }
-                    }
+                    display: block;
+                    //lookie here before commit made
                 }
             }
         }

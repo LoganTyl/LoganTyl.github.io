@@ -1,6 +1,6 @@
 const yearSpan = document.getElementById("currentYear");
-const hamburgerIcon = document.getElementsByClassName("hamburgerIcon")[0];
-const hamburgerLines = hamburgerIcon.getElementsByClassName("line");
+// const hamburgerIcon = document.getElementsByClassName("hamburgerIcon")[0];
+// const hamburgerLines = hamburgerIcon.getElementsByClassName("line");
 
 const setCurrentYear = () => {
     let currentDate = new Date();
@@ -8,10 +8,10 @@ const setCurrentYear = () => {
     yearSpan.innerHTML = currentYear;
 }
 
-hamburgerIcon.addEventListener("click", () => {
-    console.log("clicked")
-    hamburgerIcon.classList.toggle("menuOpened")
-    hamburgerIcon.classList.toggle("menuClosed")
-})
+// hamburgerIcon.addEventListener("click", () => {
+//     console.log("clicked")
+//     hamburgerIcon.classList.toggle("menuOpened")
+//     hamburgerIcon.classList.toggle("menuClosed")
+// })
 
 setCurrentYear();
