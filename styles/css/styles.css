@@ -145,7 +145,7 @@ body .navbar > header > div.hamburgerMenu .mobileNav {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 300px;
+  width: 200px;
   height: 100%;
   margin: 0;
   padding: 80px 0;
